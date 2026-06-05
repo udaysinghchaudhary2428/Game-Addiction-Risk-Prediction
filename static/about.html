@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Gaming Addiction Risk Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🎮 Gaming Addiction Risk Prediction</h1>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict-page">Predict</a></li>
+                <li><a href="/about-page" class="active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="home-container">
+        <section class="hero">
+            <h1>📊 About Our Model 📊</h1>
+            <p class="subtitle">Understanding the Technology Behind Gaming Addiction Risk Assessment</p>
+        </section>
+
+        <section class="content">
+            <div class="card">
+                <h2>🤖 Machine Learning Model</h2>
+                <p>
+                    Our gaming addiction risk assessment is powered by a <strong>Random Forest Classifier</strong>, 
+                    a state-of-the-art ensemble machine learning algorithm. The Random Forest model combines multiple 
+                    decision trees to provide robust and accurate predictions. This approach significantly reduces 
+                    overfitting and improves generalization, making it ideal for real-world medical and psychological 
+                    assessments.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; color: #667eea;">
+                    <strong>Model Version:</strong> 1.0.0
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>🌳 How Random Forest Works</h2>
+                <p>
+                    A Random Forest algorithm works by creating multiple decision trees during training and outputting 
+                    the class that is the mode of the classes output by individual trees. The key advantages include:
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8;">
+                    <li><strong>High Accuracy:</strong> Combines predictions from multiple trees for better accuracy</li>
+                    <li><strong>Robustness:</strong> Handles missing values and maintains accuracy with large data</li>
+                    <li><strong>Interpretability:</strong> Provides feature importance scores to understand key factors</li>
+                    <li><strong>Generalization:</strong> Reduces overfitting through ensemble voting mechanism</li>
+                    <li><strong>Non-parametric:</strong> Makes no assumptions about data distribution</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>📈 Input Features</h2>
+                <p>
+                    Our model analyzes <strong>9 key features</strong> to assess gaming addiction risk:
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8;">
+                    <li><strong>Behavioral:</strong> Loss of other interests, withdrawal symptoms, continued despite problems</li>
+                    <li><strong>Performance:</strong> Academic/work performance level</li>
+                    <li><strong>Sleep:</strong> Sleep disruption frequency and hours of sleep</li>
+                    <li><strong>Social:</strong> Social isolation score (1-10)</li>
+                    <li><strong>Usage:</strong> Daily gaming hours and monthly spending</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                    These features are selected based on clinical research and DSM-5 criteria for Internet Gaming Disorder.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>🎯 Risk Classification</h2>
+                <p>
+                    The model classifies gaming addiction risk into distinct categories:
+                </p>
+                <div style="margin-top: 1rem; display: grid; gap: 1rem;">
+                    <div style="padding: 1rem; background: #ffebee; border-left: 4px solid #d32f2f; border-radius: 5px;">
+                        <strong style="color: #d32f2f;">🔴 HIGH RISK (Severe)</strong>
+                        <p style="margin-top: 0.5rem; color: #666; font-size: 0.95rem;">
+                            Strong indicators of gaming addiction requiring immediate professional intervention.
+                        </p>
+                    </div>
+                    <div style="padding: 1rem; background: #fff3e0; border-left: 4px solid #f57c00; border-radius: 5px;">
+                        <strong style="color: #f57c00;">🟠 MEDIUM RISK (Moderate)</strong>
+                        <p style="margin-top: 0.5rem; color: #666; font-size: 0.95rem;">
+                            Notable gaming addiction indicators requiring monitoring and intervention.
+                        </p>
+                    </div>
+                    <div style="padding: 1rem; background: #e8f5e9; border-left: 4px solid #388e3c; border-radius: 5px;">
+                        <strong style="color: #388e3c;">🟢 LOW RISK (Minimal)</strong>
+                        <p style="margin-top: 0.5rem; color: #666; font-size: 0.95rem;">
+                            Few indicators of gaming addiction with healthy gaming habits maintained.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📚 Model Training & Validation</h2>
+                <p>
+                    The Random Forest model was trained using a comprehensive dataset of gaming behavior patterns, 
+                    clinical assessments, and validated against established addiction criteria. The model employs:
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8;">
+                    <li><strong>Cross-Validation:</strong> K-fold cross-validation ensures reliable performance estimates</li>
+                    <li><strong>Feature Scaling:</strong> Normalization of features for consistent tree splits</li>
+                    <li><strong>Hyperparameter Tuning:</strong> Optimized parameters for maximum accuracy</li>
+                    <li><strong>Train-Test Split:</strong> Separate evaluation on unseen data</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🔍 Feature Importance</h2>
+                <p>
+                    Random Forest provides insight into which features are most influential in predicting gaming addiction:
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8;">
+                    <li><strong>Daily Gaming Hours:</strong> Strong indicator of addiction severity</li>
+                    <li><strong>Continued Despite Problems:</strong> Key clinical criterion for addiction</li>
+                    <li><strong>Sleep Disruption:</strong> Physical health impact of gaming</li>
+                    <li><strong>Academic Performance:</strong> Functional impairment measure</li>
+                    <li><strong>Social Isolation Score:</strong> Relationship and social impact</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>⚠️ Important Disclaimers</h2>
+                <p>
+                    This assessment tool is designed for informational and screening purposes only:
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8;">
+                    <li>❌ NOT a clinical diagnosis</li>
+                    <li>❌ Should NOT replace professional medical evaluation</li>
+                    <li>❌ Requires consultation with mental health professionals for diagnosis</li>
+                    <li>✅ Useful for self-awareness and screening purposes</li>
+                    <li>✅ Can guide discussion with healthcare providers</li>
+                    <li>✅ Helps identify areas needing attention</li>
+                </ul>
+            </p>
+            </div>
+
+            <div class="card highlight">
+                <h2>💡 Algorithm Advantages</h2>
+                <p>
+                    Why Random Forest for Gaming Addiction Prediction?
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 1.8; color: rgba(255, 255, 255, 0.95);">
+                    <li>✓ Handles mixed data types (boolean, categorical, numeric)</li>
+                    <li>✓ Naturally ranks feature importance</li>
+                    <li>✓ Robust to outliers and missing values</li>
+                    <li>✓ Works well with psychological and behavioral data</li>
+                    <li>✓ Fast inference for real-time predictions</li>
+                    <li>✓ Proven effective in medical classification tasks</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

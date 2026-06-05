@@ -1,0 +1,40 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build
+build/
+dist/
+
+# Pytest
+.pytest_cache/
+
+# Docker
+.docker/
+
+# Model Experiments
+mlruns/
+
+# Temporary Files
+temp/
+tmp/

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Addiction Risk Assessment</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🎮 Gaming Addiction Risk Prediction</h1>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict-page" class="active">Predict</a></li>
+                <li><a href="/about-page">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Gaming Addiction Risk Assessment</h2>
+            <p class="form-subtitle">Fill in your details to get an assessment</p>
+
+            <form id="predictionForm" class="prediction-form">
+                <!-- Boolean Fields -->
+                <div class="form-group boolean-group">
+                    <h3>Behavioral Indicators</h3>
+
+                    <div class="input-field">
+                        <label>Loss of Other Interests</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="loss_of_other_interests" value="true" required>
+                                Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="loss_of_other_interests" value="false" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Withdrawal Symptoms</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="withdrawal_symptoms" value="true" required>
+                                Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="withdrawal_symptoms" value="false" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Continued Gaming Despite Problems</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="continued_despite_problems" value="true" required>
+                                Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="continued_despite_problems" value="false" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Fields -->
+                <div class="form-group">
+                    <h3>Performance & Frequency</h3>
+
+                    <div class="input-field">
+                        <label for="academic_performance">Academic/Work Performance</label>
+                        <select id="academic_performance" name="academic_work_performance" required>
+                            <option value="">-- Select Performance Level --</option>
+                            <option value="Failing">Failing</option>
+                            <option value="Poor">Poor</option>
+                            <option value="Below Average">Below Average</option>
+                            <option value="Average">Average</option>
+                            <option value="Good">Good</option>
+                            <option value="Excellent">Excellent</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="sleep_disruption">Sleep Disruption Frequency</label>
+                        <select id="sleep_disruption" name="sleep_disruption_frequency" required>
+                            <option value="">-- Select Frequency --</option>
+                            <option value="Never">Never</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Sometimes">Sometimes</option>
+                            <option value="Often">Often</option>
+                            <option value="Always">Always</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Range Fields -->
+                <div class="form-group">
+                    <h3>Usage & Health Metrics</h3>
+
+                    <div class="input-field">
+                        <label for="social_isolation">Social Isolation Score (1-10)</label>
+                        <div class="slider-container">
+                            <input type="range" id="social_isolation" name="social_isolation_score" 
+                                   min="1" max="10" value="5" class="slider">
+                            <span class="slider-value" id="social_isolation_value">5</span>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="daily_gaming">Daily Gaming Hours (0-24)</label>
+                        <div class="slider-container">
+                            <input type="range" id="daily_gaming" name="daily_gaming_hours" 
+                                   min="0" max="24" step="0.5" value="3" class="slider">
+                            <span class="slider-value" id="daily_gaming_value">3</span>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="sleep_hours">Sleep Hours (0-24)</label>
+                        <div class="slider-container">
+                            <input type="range" id="sleep_hours" name="sleep_hours" 
+                                   min="0" max="24" step="0.5" value="6" class="slider">
+                            <span class="slider-value" id="sleep_hours_value">6</span>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="monthly_spending">Monthly Game Spending (USD)</label>
+                        <input type="number" id="monthly_spending" name="monthly_game_spending_usd" 
+                               min="0" step="0.01" value="50" placeholder="Enter amount in USD" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Submit Assessment 🎮</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎮 Gaming Addiction Risk Assessment Result</h2>
+            <div id="resultContent"></div>
+            <button class="modal-close-button">Close</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
