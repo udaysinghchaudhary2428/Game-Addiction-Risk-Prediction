@@ -1,4 +1,4 @@
-# Gaming Addiction Risk Prediction
+# Game Addiction Risk Prediction
 
 ## Overview
 
